@@ -1,6 +1,9 @@
 <html>
+    <head>
+        <title>Information Gathered</title>
+    </head>
     <body>
-        # 3 Types of tags to insert PHP inside html
+        <!-- 3 Types of tags to insert PHP inside html -->
 
         <?php
             echo "<h1>Hello, World!</h1>";
