@@ -54,5 +54,33 @@
             */
 
         ?>
+
+        <?php
+            $usersName = $_POST['username'];
+            $streetAddress = $_POST['streetaddress'];
+            $cityAddress = $_POST['cityaddress'];
+
+            echo $usersName . "</br>";
+            echo $streetAddress . "</br>";
+            echo $cityAddress . "</br>";
+
+            # HEREDOC string method
+            $str = <<<EOD
+                The customers name is
+                $usersName and they
+                live at $streetAddress
+                in $cityAddress </br>
+            EOD;
+
+            ech $str;
+
+        ?>
+
+        <?php
+            # constants
+            define('PI', 3.1415926);
+            echo "the value of pi is " . PI;
+        ?>
+
     </body>
 <html>
