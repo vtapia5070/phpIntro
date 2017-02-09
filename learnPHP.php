@@ -64,15 +64,32 @@
             echo $streetAddress . "</br>";
             echo $cityAddress . "</br>";
 
-            # HEREDOC string method
+            # HEREDOC string method, must not be indented
             $str = <<<EOD
-                The customers name is
-                $usersName and they
-                live at $streetAddress
-                in $cityAddress </br>
-            EOD;
+The customers name is
+$usersName and they
+live at $streetAddress
+in $cityAddress </br>
+EOD;
 
-            ech $str;
+            $str2 = <<<EOT
+'EOT' is also used for herdoc syntax,
+and stands for 'end of text'</br>
+EOT;
+            # Note: EOT and EOD is comminly used as a herdoc delimiter,
+            # but any uppercase keyword will work such as END
+            # or PINEAPPLEPANTS
+            $str3 = <<<PINEAPPLEPANTS
+This is the way life goes.
+Once minute you're born and
+the next you're dead. What
+you do on your Sunday's in between
+depends on how big the dirt pile is.</br>
+PINEAPPLEPANTS;
+
+            echo $str;
+            echo $str2;
+            echo $str3;
 
         ?>
 
